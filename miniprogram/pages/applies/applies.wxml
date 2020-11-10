@@ -1,0 +1,70 @@
+<view class="page-wrapper">
+  <view class="header">
+    <view class="tabs">
+      <view class="tab  {{ tabIndex === index ? 'active' : '' }}"
+       id="{{ 'tab-' + index }}"
+       wx:for="{{ tabs }}"
+       wx:key="key"
+       data-index="{{ index }}"
+       bindtap="onTab">
+        {{ item }}
+       </view>
+      <view class="tab-underline"
+        style="left: {{ left }}px"></view>
+    </view>
+  </view>
+  <scroll-view class="scroll-view pt-8"
+    scroll-y="{{ true }}"
+    enable-back-to-top="{{ true }}"
+    bindscrolltolower="onScrollBottom">
+
+    <view class="content-box" wx:if="{{ list.length > 0}}">
+      <view class="content-item"
+       wx:if="{{ item.avatarUrl }}"
+       wx:for="{{ list }}"
+       wx:key="_id"
+       data-index="{{ index }}"
+       data-id="{{ item._id }}"
+       bindtap="onItemTap">
+       <block wx:if="{{ item.avatarUrl }}">
+          <view class="left">
+            <image class="avatar" src="{{ item.avatarUrl }}"></image>
+            <view class="ml-12">
+              <text>{{ item.nickName }}</text>
+              <!-- <text class="status-name">({{ applyStatusName }})</text> -->
+              <view class="mt-4 status-name">申请时间：{{ item.applyAt }}</view>
+            </view>
+          </view>
+          <view class="right">
+            <view wx:if="{{ tabIndex === 0 }}">
+              <text data-index="{{ index }}"
+                    data-id="{{ item._id }}"
+                    data-status="{{ 2 }}"
+                    catchtap="onActionTap">通过</text>
+              <text class="ml-12" 
+                    data-index="{{ index }}"
+                    data-id="{{ item._id }}"
+                    data-status="{{ -1 }}"
+                    catchtap="onActionTap">拒绝</text>
+            </view>
+            <view wx:if="{{ tabIndex === 1}}"
+                  data-index="{{ index }}"
+                  data-id="{{ item._id }}"
+                  data-status="{{ -1 }}"
+                  catchtap="onActionTap">撤销</view>
+            <view wx:if="{{ tabIndex === 2}}"
+                  data-index="{{ index }}"
+                  data-id="{{ item._id }}"
+                  data-status="{{ 1 }}"
+                  catchtap="onActionTap">重审</view>
+          </view>
+       </block>
+      </view>
+    </view>
+
+    <view class="footer pt-4 pb-32" wx:if="{{ inited }}">
+      <text wx:if="{{ list.length === 0 && !loading }}">无{{ applyStatusName }}用户</text>
+      <view class="footer-line" wx:if="{{ list.length > 0 && page >= totalPage }}"></view>
+    </view>
+  </scroll-view >
+</view>

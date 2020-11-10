@@ -1,0 +1,16 @@
+.weui-cell_wxss.weui-cell_wxss:before{display:block}
+.weui-cell.disabled {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--weui-FG-2);
+}
+.weui-cell__hd {
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+.weui-cell__icon {
+  height: 100%;
+  width: 100%;
+}

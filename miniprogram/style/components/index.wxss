@@ -1,0 +1,22 @@
+.key-half-screen-dialog {
+  height: 85%;
+  max-height: 85%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.key-half-screen-dialog .weui-half-screen-dialog__title {
+  text-align: center;
+}
+.key-half-screen-dialog .weui-half-screen-dialog__bd {
+  padding-top: 0;
+}
+
+.key-half-screen-dialog .weui-half-screen-dialog__hd {
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.access-screen-dialog {
+  height: 75%;
+}

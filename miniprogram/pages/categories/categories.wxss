@@ -1,0 +1,44 @@
+.item-box {
+  padding: 0 8px 0 16px;
+}
+.item-group {
+  display: flex;
+}
+.item {
+  box-sizing: border-box;
+  display: flex;
+  width: 33.33%;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  color: var(--weui-TAG-TEXT-BLACK);
+  background-color: var(--weui-TAG-BACKGROUND-BLACK);
+  border: 2px solid transparent;
+}
+.item.active {
+  position: relative;
+  border-color: var(--weui-BRAND);
+}
+.item.placeholder {
+  background-color: transparent !important;
+  border: none !important;
+}
+.item.active::before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: ' ';
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: var(--weui-BRAND);
+  border-right-color: var(--weui-BRAND);
+}
+.item-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}

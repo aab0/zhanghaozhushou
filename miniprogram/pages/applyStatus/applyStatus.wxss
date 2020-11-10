@@ -1,0 +1,15 @@
+
+.image-box {
+  display: flex;
+  justify-content: center;
+}
+.image {
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+.status-text {
+  text-align: center;
+  font-size: 18px;
+  color: var(--weui-FG-1);
+}

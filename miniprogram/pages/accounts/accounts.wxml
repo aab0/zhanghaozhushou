@@ -1,0 +1,49 @@
+<searchbar bindinput="onSearchInput" bindclear="onSearchClear"></searchbar>
+<view class="list-box" wx:if="{{ list.length > 0 }}">
+	<view class="list-item" wx:for="{{ list }}" wx:key="_id">
+		<view class="list-item-box" wx:if="{{ item.account }}">
+			<view class="item-left">
+				<view class="item-title">账号：</view>
+				<view class="item-content">{{ item.account }}</view>
+			</view>
+			<view class="item-copy" data-data="{{ item.account }}" bindtap="onCopy">复制</view>
+		</view>
+		<view class="list-item-box" wx:if="{{ item.password }}">
+			<view class="item-left">
+				<view class="item-title">密码：</view>
+				<view class="item-content" data-data="{{ item.password }}">{{ item.password }}</view>
+			</view>
+			<view class="item-copy" data-data="{{ item.password }}" bindtap="onCopy">复制</view>
+		</view>
+		<view class="list-item-box" wx:if="{{ item.remark }}">
+			<view class="item-left">
+				<view class="item-title">备注：</view>
+				<view class="item-content" data-data="{{ item.remark }}">{{ item.remark }}</view>
+			</view>
+			<view class="item-copy" data-data="{{ item.remark }}" bindtap="onCopy">复制</view>
+		</view>
+		<view class="list-item-box category-save-type" wx:if="{{ item.category }}">
+			<view class="item-left">
+				<view class="item-title">分类：</view>
+				<view class="item-content">{{ item.category }}</view>
+			</view>
+			<view class="item-left ml-32">
+				<view class="item-title">存储：</view>
+				<view class="item-content">{{ saveType }}</view>
+			</view>
+		</view>
+		<view class="item-tool-box">
+			<view class="tool-item left" bindtap="onModify"
+			 data-index="{{ index }}"
+			 data-id="{{ item.id }}">编辑</view>
+			<view class="tool-item" bindtap="onRemove"
+			 data-index="{{ index }}"
+			 data-id="{{ item.id }}">删除</view>
+		</view>
+	</view>
+</view>
+
+<view class="footer pt-12 pb-32" wx:if="{{ inited }}">
+	<text wx:if="{{ list.length === 0 }}">无相关账号</text>
+	<view class="footer-line" wx:if="{{ list.length > 0 }}"></view>
+</view>

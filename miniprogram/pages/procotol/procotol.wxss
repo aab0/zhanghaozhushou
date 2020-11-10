@@ -1,0 +1,20 @@
+.box {
+  box-sizing: border-box;
+  padding: 16px;
+  padding-bottom: 32px;
+}
+.title {
+  font-weight: 600;
+  font-size: 19px;
+  text-align: center;
+}
+.description {
+  font-size: 17px;
+  margin-top: 12px;
+}
+.text-button.contact-button {
+  font-size: 17px;
+  line-height: 17px;
+  height: 17px;
+  margin-left: 2px;
+}

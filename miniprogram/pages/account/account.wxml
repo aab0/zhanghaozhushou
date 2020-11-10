@@ -1,0 +1,38 @@
+<view class="wrapper">
+  <cells>
+    <cell title="账号">
+      <input placeholder="请输入账号"
+       data-type="account"
+       value="{{ account }}"
+       bindinput="onInput"></input>
+    </cell>
+    <cell title="密码">
+      <input placeholder="请输入密码"
+       data-type="password"
+       value="{{ password }}"
+       bindinput="onInput"></input>
+    </cell>
+    <cell title="备注">
+      <input placeholder="请输入备注"
+       data-type="remark"
+       value="{{ remark }}"
+       bindinput="onInput"></input>
+    </cell>
+    <cell title="分类" link url="/pages/categories/categories">
+      <view class="category">{{ category }}</view>
+    </cell>
+    <picker range="{{ saveRange }}" bindchange="onSaveTypeChange">
+      <cell title="存储" link>
+        <view class="category">{{ saveType }}</view>
+      </cell>
+    </picker>
+    <picker range="{{ cryptoRange }}"
+            wx:if="{{ cryptoType === '云端' }}"
+            bindchange="onCryptoTypeChange">
+      <cell title="加密方式" link ext-class="crypto-cell">
+        <view class="category">{{ cryptoType }}</view>
+      </cell>
+    </picker>
+  </cells>
+  <button type="primary" class="mt-32" bindtap="onButtonTap">保存</button>
+</view>

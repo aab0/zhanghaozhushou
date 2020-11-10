@@ -1,0 +1,52 @@
+<half-screen-dialog ext-class="key-half-screen-dialog"
+  closabled="{{ false }}"
+  show="{{ show }}"
+  maskClosable="{{ false }}">
+  <view slot="title">
+    <view class="dialog-header">
+      <view class="left" bindtap="onCancel">取消</view>
+      <view class="center">{{ title }}</view>
+      <view class="right" bindtap="onConfirm">确认</view>
+    </view>
+  </view>
+  <view slot="desc">
+   <cells>
+      <cell title="{{ firstKeyTitle }}">
+         <view class="input-box">
+            <input class="key" placeholder="{{ firstKeyPlaceholder }}"
+               bindinput="onInput"
+               type="password"
+               value="{{ firstKey }}"
+               wx:if="{{ hide }}"
+               adjust-position="{{ true }}"></input>
+            <input wx:else class="key" placeholder="请输入主密码"
+               bindinput="onInput"
+               type="text"
+               value="{{ firstKey }}"
+               adjust-position="{{ true }}"></input>
+            <image class="icon"
+               src="{{ hide ? '/images/icon_hide.png' : '/images/icon_browse.png' }}"
+               bindtap="onIconTap"></image>
+         </view>
+      </cell>
+      <cell title="{{ secondKeyTitle }}" wx:if="{{ type === 'change' }}">
+         <view class="input-box">
+            <input class="key" placeholder="{{ secondKeyPlaceholder }}"
+               bindinput="onSecondKeyInput"
+               type="password"
+               value="{{ secondKey }}"
+               adjust-position="{{ true }}"
+               wx:if="{{ secondKeyHide }}"></input>
+            <input wx:else class="key" placeholder="{{ secondKeyPlaceholder }}"
+               bindinput="onSecondKeyInput"
+               type="text"
+               value="{{ secondKey }}"
+               adjust-position="{{ true }}"></input>
+            <image class="icon"
+               src="{{ secondKeyHide ? '/images/icon_hide.png' : '/images/icon_browse.png' }}"
+               bindtap="onSecondKeyIconTap"></image>
+         </view>
+      </cell>
+   </cells>
+  </view>
+</half-screen-dialog>

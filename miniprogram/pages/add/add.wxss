@@ -1,0 +1,12 @@
+.password-text {
+  white-space: nowrap;
+  color: var(--weui-LINK);
+  font-weight: 500;
+}
+.password-text:active {
+  color: var(--weui-LINK-ALPHA);
+}
+.tip {
+  font-size: 14px;
+  color: var(--weui-FG-1);
+}

@@ -1,0 +1,81 @@
+<view class="wrapper">
+  <view class="header">
+    <view class="header-item" data-type="云端" bindtap="onHeaderItemTap">
+      <image class="header-icon" src="/images/icon_cloud.png"></image>
+      <view class="mt-4">云端</view>
+      <view class="mt-4">{{ cloudAccounts }}</view>
+    </view>
+    <view class="header-item" data-type="本地" bindtap="onHeaderItemTap">
+      <image class="header-icon" src="/images/icon_local.png"></image>
+      <view class="mt-4">本地</view>
+      <view class="mt-4">{{ localAccounts }}</view>   
+    </view>
+  </view>
+
+  <view class="card mt-16">
+    <view class="card-header">服务</view>
+    <view class="card-content">
+      <view class="card-row">
+        <view class="card-cell">
+          <button class="text-button cell-content"
+            bindtap="onChangePasswordTap">
+            <image class="card-icon" src="/images/icon_key.png"></image>
+            <view class="mt-8">{{ passwordText }}</view>
+          </button>
+        </view>
+        <view class="card-cell" wx:if="{{ role !== 'admin' }}">
+          <button class="text-button cell-content"
+            open-type="getUserInfo"
+            bindgetuserinfo="onApplyCloudAccess">
+            <image class="card-icon" src="/images/icon_shenqi.png"></image>
+            <view class="mt-8">申请云存储</view>
+          </button>
+        </view>
+        <view class="card-cell" wx:if="{{ role === 'admin' }}">
+          <button class="text-button cell-content"
+            bindtap="onReviewTap">
+            <image class="card-icon" src="/images/icon_shenhe.png"></image>
+            <view class="mt-8">审核</view>
+          </button>
+        </view>
+        <view class="card-cell">
+          <button class="text-button cell-content" open-type="contact">
+            <image class="card-icon" src="/images/icon_helper.png"></image>
+            <view class="mt-8">联系管理员</view>
+          </button>
+        </view>
+      </view>
+      <view class="card-row">
+        <view class="card-cell">
+          <button class="text-button cell-content"
+            bindtap="onQuestionsTap">
+            <image class="card-icon" src="/images/icon_question.png"></image>
+            <view class="mt-8">常见问题</view>
+          </button>
+        </view>
+        <view class="card-cell">
+          <button class="text-button cell-content"
+            bindtap="onIndependentDeployTap">
+            <image class="card-icon" src="/images/icon_private.png"></image>
+            <view class="mt-8">{{ isAccountAssistant ? '私有部署' : '技术支持' }}</view>
+            <view class="card-desc">hot</view>
+          </button>
+        </view>
+        <view class="card-cell">
+          <button class="text-button cell-content"
+            open-type="share"
+            bindtap="onCardShareTap">
+            <image class="card-icon" src="/images/icon_invite.png"></image>
+            <view class="mt-8">分享</view>
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<private-key
+  show="{{ showKeyDialog }}"
+	type="{{ keyDialogType }}"
+	callback="{{ keyDialogCallback }}"
+ 	bindconfirm="onKeyDialogConfirm"></private-key>

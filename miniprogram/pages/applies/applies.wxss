@@ -1,0 +1,93 @@
+page {
+  height: 100%;
+  background-color: var(--weui-BG-1);
+}
+.header {
+  background-color: var(--weui-BG-1);
+}
+.tabs {
+  position: relative;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+}
+.tab {
+  position: relative;
+  padding: 0 12px;
+  color: var(--weui-FG-1);
+  transition: all 0.15s ease-in-out;
+}
+.tab-underline {
+  position: absolute;
+  bottom: 0;
+  width: 32px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--weui-BRAND);
+  transition: all 0.15s ease-in-out;
+}
+.tab.active {
+  color: var(--weui-FG-0);
+
+}
+.scroll-view {
+  height: calc(100% - 48px);
+}
+.page-wrapper {
+  height: 100%;
+}
+.header-left-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: var(--weui-FG-HALF);
+  font-size: 14px;
+}
+.picker-text {
+  word-break: keep-all;
+  white-space: nowrap;
+  margin-left: 4px;
+  margin-right: 12px;
+}
+.switch-picker {
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.content-box {
+  box-sizing: border-box;
+  padding: 16px;
+}
+.content-item {
+  background-color: var(--weui-WHITE);
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left {
+  display: flex;
+  align-items: center;
+}
+.right {
+  white-space: nowrap;
+  color: var(--weui-LINK);
+  font-size: 15px;
+  font-weight: 500;
+}
+.right:active {
+  color: var(--weui-LINK-ALPHA);
+}
+.avatar {
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 80px;
+}
+.status-name {
+  color: var(--weui-FG-1);
+  font-size: 13px;
+}

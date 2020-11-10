@@ -1,0 +1,21 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  line-height: 15px;
+}
+
+.support {
+  font-size: 15px;
+  color: var(--weui-FG-1);
+}
+.app-name {
+  font-size: 15px;
+  margin-left: 4px;
+  font-weight: 500;
+  color: var(--weui-LINK);
+}
+.app-name:active {
+  color: var(--weui-LINK-ALPHA);
+}

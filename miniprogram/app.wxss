@@ -1,0 +1,6 @@
+@import './style/var.wxss';
+@import './components/weui-wxss/dist/style/weui.wxss';
+@import './style/index.wxss';
+@import './style/margin.wxss';
+@import './style/padding.wxss';
+@import './style/button.wxss';

@@ -1,0 +1,43 @@
+.button {
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 5px 16px;
+  font-size: 16px;
+  background-color: #ededed;
+  color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+.button.full {
+  padding: 12px 0;
+  width: 100%;
+  border-radius: 0;
+}
+.button.primary {
+  background-color: #07c160;
+  color: #ffffff;
+}
+.button.primary:active {
+  background-color: rgba(7, 193, 96, 0.8);
+}
+.text-button {
+  display: inline;
+  box-sizing: border-box;
+  background: transparent;
+  padding: 0;
+  border-radius: initial;
+  font-weight: normal;
+  min-height: initial;
+  line-height: inherit;
+  font-size: inherit;
+  text-align: left;
+}
+.text-button:not([size='mini']) {
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+}
+.text-button::after {
+  content: ' ';
+  width: 0 !important;
+  height: 0 !important;
+}

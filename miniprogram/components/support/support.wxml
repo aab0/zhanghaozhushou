@@ -1,0 +1,5 @@
+<!-- 技术支持 -->
+<view class="box" bindtap="onTap">
+  <text class="support">技术支持：</text>
+  <text class="app-name">账号助手</text>
+</view>

@@ -1,0 +1,24 @@
+<view class="box pb-32">
+  <view class="title">使用说明和协议</view>
+  <view class="description">
+  <text class="bold">账号助手</text>是一个方便用户记录个人账号密码的效率工具，支持本地存储和云端存储。</view>
+
+  <view class="description">云端存储可使用国密SM4或AES加密算法对数据进行加密，加密密钥为你设置的主密码。</view>
+
+  <view class="description">主密码将使用SHA256签名后将签名数据存储于云端。签名数据将用于匹配主密码，以用于登录本程序。</view>
+
+  <view class="description">数据存储的数据库为小程序云开发数据库。数据免费存储期限理论上为永久（只要微信不倒闭，以及云开发免费存储额度不取消）。</view>
+
+ <view class="description">使用云端存储前需要先提交申请，由管理原审核通过后即可拥有免费的云存储权限。</view>
+
+  <view class="description">本地存储只把数据存储于你所创建账号的终端。</view>
+
+  <view class="description">存储在云端的数据均为加密数据，任何人无主密码都无法解密查看明文数据，小程序管理者可以通过管理后台查看云端的<text class="bold">加密数据</text>。本地存储的数据由创建设备的拥有者完全支配。本小程序运营者尽最大可能保障数据安全，但不承担任何责任。</view>
+
+  <view class="description" wx:if="{{ isAccountAssistant }}">本小程序支持私有部署，私有部署后你将成为小程序的管理员，你的将数据更加安全。如需私有部署，请<button class="text-button bold link pl-4 pr-4 contact-button" open-type="contact" bindtap="onContactTap">联系</button>管理员。
+  </view>
+
+  <view class="mt-20" wx:if="{{ !isAccountAssistant }}">
+    <tech-support></tech-support>
+  </view>
+</view>

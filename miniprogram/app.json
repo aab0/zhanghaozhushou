@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/personal/personal",
+    "pages/add/add",
+    "pages/categories/categories",
+    "pages/key/key",
+    "pages/webview/webview",
+    "pages/accounts/accounts",
+    "pages/account/account",
+    "pages/applies/applies",
+    "pages/applyStatus/applyStatus",
+    "pages/procotol/procotol"
+  ],
+  "usingComponents": {
+    "mp-icon": "/components/icon/icon",
+    "cell": "/components/cell/cell",
+    "cells": "/components/cells/cells",
+    "slideview": "/components/slideview/slideview",
+    "navigation-bar": "/components/navigation-bar/navigation-bar",
+    "searchbar": "/components/searchbar/searchbar",
+    "half-screen-dialog": "/components/half-screen-dialog/half-screen-dialog",
+    "mp-navigation-bar": "/components/navigation-bar/navigation-bar",
+    "private-key": "/components/key/key",
+    "access-dialog": "/components/access/access",
+    "tech-support": "/components/support/support"
+  },
+  "window": {
+    "backgroundColor": "#f7f7f7",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f7f7f7",
+    "navigationBarTitleText": "账号助手",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#4c4c4c",
+    "selectedColor": "#07c160",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/images/icon_home.png",
+        "selectedIconPath": "/images/icon_home_primary.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "iconPath": "/images/icon_add.png",
+        "selectedIconPath": "/images/icon_add_primary.png",
+        "text": "创建"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "iconPath": "/images/icon_user.png",
+        "selectedIconPath": "/images/icon_user_primary.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

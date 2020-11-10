@@ -1,0 +1,47 @@
+@import './components/index.wxss';
+
+page {
+  box-sizing: border-box;
+  color: var(--weui-FG-HALF);
+}
+.link {
+  color: var(--weui-LINK);
+}
+.bold {
+  font-weight: bold;
+}
+.footer {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--weui-FG-1);
+}
+.footer-line {
+  position: relative;
+  width: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--weui-FG-2);
+}
+.footer-line::before {
+  content: ' ';
+  width: 80px;
+  height: 1px;
+  background-color: var(--weui-FG-3);
+  position: absolute;
+  top: 50%;
+  left: 20px;
+}
+.footer-line::after {
+  content: ' ';
+  width: 80px;
+  height: 1px;
+  background-color: var(--weui-FG-3);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+}
+.crypto-cell .weui-cell__hd {
+  width: 64px;
+}

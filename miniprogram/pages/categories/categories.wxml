@@ -1,0 +1,19 @@
+<view class="item-box mt-16">
+  <view class="item-group"
+   wx:for="{{ list }}"
+   wx:key="index"
+   wx:for-item="groupItem" 
+   wx:for-index="groupIndex">
+    <view class="item {{ item.active ? 'active': '' }} {{ item.name ? '' : 'placeholder'}}"
+      wx:for="{{ groupItem }}"
+      wx:key="name"
+      data-index="{{ index }}"
+      data-group-index="{{ groupIndex }}"
+      bindtap="onItemTap">
+      <image class="item-icon" wx:if="{{ item.icon }}" src="{{ item.icon }}"></image>
+      <view class="item-name" wx:if="{{ item.name }}">{{ item.name }}</view>
+    </view>
+  </view>
+</view>
+<button type="primary" class="mt-36" bindtap="onButtonTap">选好了</button>
+

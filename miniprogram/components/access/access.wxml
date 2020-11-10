@@ -1,0 +1,18 @@
+<half-screen-dialog
+ title="云存储权限申请"
+ show="{{ showAccessDialog }}"
+ ext-class="access-screen-dialog"
+ bindclose="onClose">
+	<view slot="desc">
+		<button type="primary"
+		 open-type="getUserInfo"
+		 bindgetuserinfo="onAccessDialogGetUserInfo">授权申请</button>
+		<view class="description-box mt-24">
+			<view class="description">1. 申请云存储需要获取你的头像和昵称信息，以便管理员确认你的身份；</view>
+			<view class="description mt-8">2. 申请前你应该先查看云存储的
+				<text class="link bold" bindtap="onGoToQuestions">相关问题和协议</text>；
+			</view>
+			<view class="description mt-8">3. 如你申请云存储权限，将视为你了解并同意云存储的相关问题和协议。</view>
+		</view>
+	</view>
+ </half-screen-dialog>

@@ -1,0 +1,4 @@
+.description-box {
+  font-size: 15px;
+  color: var(--weui-FG-1);
+}

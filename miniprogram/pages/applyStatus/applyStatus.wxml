@@ -1,0 +1,20 @@
+<view wx:if="{{ inited }}">
+  <view class="image-box mt-16">
+    <image class="image"
+     wx:if="{{ status === 2 }}" src="/images/icon_done.png"></image>
+    <image class="image"
+     wx:if="{{ status === 1 }}" src="/images/icon_wait.png"></image>
+    <image class="image"
+     wx:if="{{ status === -1 }}" src="/images/icon_sad.png"></image> 
+  </view>
+
+  <view class="status-text mt-16">
+    <text wx:if="{{ status === 1 }}">云存储权限申请正在审核中</text>
+    <text wx:if="{{ status === 2 }}">你已拥有云端存储权限</text>
+    <text wx:if="{{ status === -1 }}">云存储申请审核不通过</text>
+  </view>
+
+  <button class="mt-36" type="primary" bindtap="onRefresh">刷新状态</button>
+
+  <button class="mt-36" type="primary" open-type="contact">联系管理员</button>
+</view>
