@@ -13,7 +13,7 @@
 3. 开通云开发，在miniprogram/env.js里填写云环境ID
 4. 在云开发后台创建users，accounts和applies集合
 5. 在cloudfunctions/users/目录下运行 `npm i`(运行前需要安装node和npm)
-6. 运行测试，在users集合中手动绑定自己账号的角色为admin
+6. 运行测试后，在users集合里对应自己的账号信息记录中手动添加role字段，值为admin
 7. 提交审核，大功告成！
 
 ### 技术支持
